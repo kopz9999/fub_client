@@ -1,8 +1,7 @@
 # FubClient
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/fub_client`. To experiment with that code, run `bin/console` for an interactive prompt.
-
-TODO: Delete this and the text above, and describe your gem
+This gem is a Ruby Client for [Follow Up Boss API](https://api.followupboss.com/api-documentation/)
+For more information about Follow Up Boss go to [www.followupboss.com](www.followupboss.com)
 
 ## Installation
 
@@ -22,7 +21,21 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+After installing the gem, you can start consuming FUB resources as Rails like 
+models with shorthand methods:
+
+```ruby
+# Get one event 
+event = FubClient::Event.find 12
+
+# Paginate (offset calculated)
+person = FubClient::Person.by_page 2, 10
+# => Her::Model::Relation<Person>
+
+# Total (from all records)
+total = FubClient::EmailTemplate.total
+# => 323
+```
 
 ## Development
 

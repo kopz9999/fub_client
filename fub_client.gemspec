@@ -9,9 +9,9 @@ Gem::Specification.new do |spec|
   spec.authors       = ["Kyoto Kopz"]
   spec.email         = ["kopz9999@gmail.com"]
 
-  spec.summary       = %q{TODO: Write a short summary, because Rubygems requires one.}
-  spec.description   = %q{TODO: Write a longer description or delete this line.}
-  spec.homepage      = "TODO: Put your gem's website or public repo URL here."
+  spec.summary       = 'Ruby client for Follow Up Boss API http://www.followupboss.com'
+  # spec.description   = %q{TODO: Write a longer description or delete this line.}
+  spec.homepage      = "https://github.com/kopz9999/fub_client"
   spec.license       = "MIT"
 
   # Prevent pushing this gem to RubyGems.org. To allow pushes either set the 'allowed_push_host'
@@ -27,7 +27,16 @@ Gem::Specification.new do |spec|
   spec.executables   = spec.files.grep(%r{^exe/}) { |f| File.basename(f) }
   spec.require_paths = ["lib"]
 
+  spec.add_dependency "her", "~> 0.8.1"
+  spec.add_dependency "faraday", "~> 0.8.11"
+  spec.add_dependency "facets", "~> 3.0.0"
+  
+  # Developemnt
   spec.add_development_dependency "bundler", "~> 1.12"
   spec.add_development_dependency "rake", "~> 10.0"
   spec.add_development_dependency "rspec", "~> 3.0"
+  spec.add_development_dependency "dotenv", "~> 2.1.1"
+  spec.add_development_dependency "vcr", "~> 3.0.3"
+  spec.add_development_dependency "webmock", "~> 2.1.0"
+  spec.add_development_dependency "pry", "~> 0.10.3"
 end
