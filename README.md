@@ -37,6 +37,17 @@ total = FubClient::EmailTemplate.total
 # => 323
 ```
 
+Put your API key in an environment variable named FUB_API_KEY:
+```bash
+$ export FUB_API_KEY=your_key
+```
+
+Or set it up via the client instance:
+
+```ruby
+FubClient::Client.instance.api_key = 'your_key'
+```
+
 ## Development
 
 After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake spec` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
