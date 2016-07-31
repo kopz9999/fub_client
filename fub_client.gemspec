@@ -28,15 +28,15 @@ Gem::Specification.new do |spec|
   spec.require_paths = ["lib"]
 
   spec.add_dependency "her", "~> 0.8.1"
-  spec.add_dependency "faraday", "~> 0.8.11"
-  spec.add_dependency "facets", "~> 3.0.0", '>= 3.0.0'
-  
+  spec.add_dependency "faraday", ">= 0.8", '<= 0.9.2'
+  spec.add_dependency "facets", '>= 3.0.0'
+
   # Developemnt
   spec.add_development_dependency "bundler", "~> 1.12"
   spec.add_development_dependency "rake", "~> 10.0"
   spec.add_development_dependency "rspec", "~> 3.0"
-  spec.add_development_dependency "dotenv", "~> 2.1.1", '>= 2.1.1'
-  spec.add_development_dependency "vcr", "~> 3.0.3", '>= 3.0.3'
-  spec.add_development_dependency "webmock", "~> 2.1.0", '>= 2.1.0'
-  spec.add_development_dependency "pry", "~> 0.10.3"
+  spec.add_development_dependency "dotenv", '>= 2.1.1'
+  spec.add_development_dependency "vcr", '>= 3.0.3'
+  spec.add_development_dependency "webmock", '>= 2.1.0'
+  spec.add_development_dependency "pry", ">= 0.10.3"
 end

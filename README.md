@@ -8,7 +8,7 @@ For more information about Follow Up Boss go to [www.followupboss.com](www.follo
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'fub_client'
+gem 'fub_client', '0.1.1'
 ```
 
 And then execute:
@@ -22,14 +22,15 @@ Or install it yourself as:
 ## Usage
 
 After installing the gem, you can start consuming FUB resources as Rails like 
-models with shorthand methods:
+models with shorthand methods based on [Her](https://github.com/remiprev/her) 
+models:
 
 ```ruby
 # Get one event 
 event = FubClient::Event.find 12
 
 # Paginate (offset calculated)
-person = FubClient::Person.by_page 2, 10
+persons = FubClient::Person.by_page 2, 10
 # => Her::Model::Relation<Person>
 
 # Total (from all records)
